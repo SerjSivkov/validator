@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "required": [],
+  "properties": {
+    "booking_office_id": { "type": "string" },
+    "host": { "type": "string" },
+    "currency": {
+      "type": "string",
+      "format": "currency"
+    },
+    "base_currency": {
+      "type": "string",
+      "format": "currency"
+    },
+    "client": { "type": "string" },
+    "username": { "type": "string" },
+    "password": { "type": "string" },
+    "pcc": { "type": "string" },
+    "tkt_office": { "type": "number" },
+    "rec_count": { "type": "number" },
+    "autotckt": { "type": "boolean" },
+    "related_avia_commission_for_suppliers": { "type": "object" },
+    "related_book_config_for_suppliers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suppliers": { "type": "string" },
+          "config": { "type": ["string", "number"] },
+          "strict": { "type": "boolean" }
+        }
+      }
+    },
+    "exclude_airlines_by_count_pax": { "type": "object" },
+    "offline_ticketing": { "type": "boolean" },
+    "office_id": { "type": "string" },
+    "avia_city_filter_id": { "type": "number" },
+    "day_tl": {
+      "type": "string",
+      "format": "day-tl"
+    },
+    "without_commision": { "type": "boolean" },
+    "force_ffi_suppliers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "supplier-length"
+      }
+    },
+    "show_booking_office_id": { "type": "boolean" },
+    "office_info": { "type": "string" },
+    "min_time_limit_for_our_db": { "type": "object" },
+    "account_number": { "type": "string" },
+    "ffi_fare_currency": {
+      "type": "string",
+      "format": "currency"
+    },
+    "cache_mode": { "type": "number" },
+    "cross_pult_filters": { "type": "string" },
+    "suppliers_with_absent_email": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "supplier-length"
+      }
+    },
+    "enett": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "card_url": { "type": "string" },
+        "currency": {
+          "type": "string",
+          "format": "currency"
+        },
+        "secret_key": { "type": "string" }
+      }
+    },
+    "vcard": {
+      "type": "object",
+      "required": ["enabled"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "currency": {
+          "type": "string",
+          "format": "currency"
+        },
+        "partner": { "type": "string" },
+        "card_type": {
+          "type": "object",
+          "properties": {
+            "corp": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "supplier-length"
+              }
+            }
+          }
+        }
+      }
+    },
+    "calculate_vat_by_supplier": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "supplier-length"
+      }
+    },
+    "cc_strict_mode": { "type": "boolean" },
+    "show_system_commission": { "type": "boolean" },
+    "show_search_timelimit": { "type": "boolean" },
+    "offline_ticketing_fare": { "type": "string" },
+    "deep_search": {
+      "type": "object",
+      "properties": {
+        "days": { "type": "number" },
+        "airsearch_filter_id": { "type": "number" }
+      }
+    },
+    "failed_autotckt_timelimit": { "type": "number" },
+    "connection_timeout": { "type": "number" },
+    "looktobook_limit": { "type": "number" },
+    "queue_ticketing": {
+      "type": "object",
+      "properties": {
+        "remarks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "remark_cc": { "type": "string" },
+        "queue_office": { "type": "string" },
+        "queue_number": { "type": "number" }
+      }
+    },
+    "e_stream": {
+      "type": "object",
+      "properties": {
+        "api_url": { "type": "string" },
+        "api_key": { "type": "string" },
+        "enabled": { "type": "boolean" },
+        "gds_search": { "type": "boolean" }
+      }
+    },
+    "search_system_id": { "type": "number" },
+    "cert_prefix": { "type": "string" },
+    "gds_cache": { "type": "object" },
+    "use_related_config_for_offline_ticketing": { "type": "boolean" }
+  },
+  "patternProperties": {
+    "^-([0-9a-zA-Z_]+)*$": { "type": "any" }
+  },
+  "additionalProperties": true
+}
