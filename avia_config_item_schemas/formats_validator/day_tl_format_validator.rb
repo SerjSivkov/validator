@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Avia
-  module AviaConfigItemSchemas
+  module ConfigItemSchemas
     module FormatsValidator
       class DayTlFormatValidator
         def self.invoke
