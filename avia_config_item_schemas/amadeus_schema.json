@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "required": [
+    "office_id", "currency"
+  ],
+  "properties": {
+    "organization_id": { "type": "string" },
+    "originator": { "type": "string" },
+    "allowed_airlines": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "supplier-length"
+      }
+    },
+    "schema_location": { "type": "string" },
+    "remove_yq": {
+      "type": ["boolean", "array"],
+      "items": { "type": "string" }
+    },
+    "remove_yr": {
+      "type": ["boolean", "array"],
+      "items": { "type": "string" }
+    },
+    "suppliers_with_foid": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "supplier-length"
+      }
+    },
+    "binary_password": { "type": "string" },
+    "OS": { "type": "object" },
+    "show_baggage": { "type": "boolean" },
+    "flexible_time_limit": { "type": "object" },
+    "tour_codes": { "type": "object" },
+    "FE": { "type": "object" },
+    "calculate_vat": { "type": "boolean" },
+    "vat_office_id": { "type": "string" },
+    "vat_office_pin": { "type": "number" },
+    "price_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "book_configs_for_supplier": { "type": "object" },
+    "configs_for_supplier": { "type": "object" },
+    "company_time_limit": { "type": "object" },
+    "market_iata_code": { "type": "string" },
+    "familes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fare": { "type": "string" },
+          "hi": { "type": "number" },
+          "carrierId": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "fb": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "ft": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "tariffs": {
+      "type": ["array", "object"],
+      "items": { "type": "string" }
+    },
+    "avia_city_filter_for_book_id": { "type": "number" },
+    "mpis_signin": { "type": "string" },
+    "search_tarification_currency": {
+      "type": "string",
+      "format": "currency"
+    },
+    "tarification_currency": {
+      "type": "string",
+      "format": "currency"
+    },
+    "carrier_qualifier": { "type": "string" },
+    "s7_middleware": { "type": "boolean" },
+    "ddi": {
+      "type": "string",
+      "format": "supplier-length"
+    },
+    "subsidy_fare_codes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "exclude_airlines": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "supplier-length"
+      }
+    },
+    "remarks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pult_timezone": { "type": "string" },
+    "request_timeout_by_action": { "type": "object" },
+    "connection_timeout": { "type": "number" },
+    "carrier_qualifiers": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "FT": { "type": "object" },
+    "wsdl_endpoint": { "type": "string" },
+    "agent_duty_code": {
+      "type": "string",
+      "format": "supplier-length"
+    },
+    "pax_type_map": { "type": "object" },
+    "skip_informative_pricing": { "type": "boolean" },
+    "ES": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "office_access": { "type": "object" }
+      }
+    },
+    "book_ID": { "type": "number" },
+    "tkt_ID": { "type": "number" },
+    "grand_access_officces": { "type": "string" },
+    "discounts": { "type": "object" },
+    "ffi": { "type": "boolean" },
+    "phone_mask": { "type": "object" },
+    "phone_force_sent": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "xfares": {
+      "type": "object",
+      "properties": {
+        "url": { "type": "string" },
+        "token": { "type": "string" },
+        "interval": { "type": "number" },
+        "max_attempts": { "type": "number" },
+        "suppliers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "supplier-length"
+          }
+        }
+      }
+    }
+  },
+  "patternProperties": {
+    "^-([0-9a-zA-Z_]+)*$": { "type": "any" }
+  },
+  "additionalProperties": false
+}
