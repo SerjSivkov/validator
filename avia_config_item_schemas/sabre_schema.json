@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "required": [
+    "host", "username", "password", "pcc", "currency", "ticketing_printer"
+  ],
+  "properties": {
+    "ticketing_printer": { "type": "string" }
+  },
+  "patternProperties": {
+    "^-([0-9a-zA-Z_]+)*$": { "type": "any" }
+  },
+  "additionalProperties": false
+}
