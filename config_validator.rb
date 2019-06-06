@@ -30,18 +30,8 @@ module Avia
 
     def gds_schema
       {
-        GdsUAPI::Driver::ID                  => load_schema('uapi_schema'),
-        GdsFactory::SKYPICKER_DRIVER_ID      => load_schema('skypicker_schema'),
-        GdsFactory::SIRENA_DRIVER_ID         => load_schema('sirena_schema'),
-        GdsSpecialfare::Driver::ID           => load_schema('specialfare_schema'),
-        GdsFactory::NAVITAIRE_DRIVER_ID      => load_schema('navitaire_schema'),
-        GdsFactory::FARELOGIX_DRIVER_ID      => load_schema('farelogix_schema'),
-        GdsFactory::NDC_AIR_FRANCE_DRIVER_ID => load_schema('ndc_airfrance_schema'),
-        NdcTurkmenistanAirline::Driver::ID   => load_schema('ndc_turkmenistan_schema'),
-        GdsFactory::AMADEUS_DRIVER_ID        => load_schema('amadeus_schema'),
-        GdsSabre::Driver::ID                 => load_schema('sabre_schema'),
-        GdsFactory::GALILEO_WS_DRIVER_ID     => load_schema('galileo_schema'),
-        GdsFactory::GABRIEL_DRIVER_ID        => load_schema('gabriel_schema')
+        GdsFactory::AMADEUS_DRIVER_ID => load_schema('amadeus_schema'),
+        GdsSabre::Driver::ID          => load_schema('sabre_schema'),
       }.fetch(@gds_id, nil)
     end
 
